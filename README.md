@@ -1,5 +1,5 @@
-# Kotlin REST API with Spring-boot, Spring-Data, H2 In-Memory DB
-This demo project explains REST API development with Kotlin with Spring Boot.
+# REST API with Kotlin, Spring-boot, Spring-Data, H2 In-Memory DB
+This demo project explains REST API development with Kotlin and Spring Boot.
 
 ##### Needed gradle dependencies
 ```
@@ -57,5 +57,5 @@ GET - http://localhost:8080/parkrun/runners/2
 DELETE - http://localhost:8080/parkrun/runners/2
 
 ### Find detailed explanation on this at my blog
-https://extremeportal.blogspot.com
+https://extremeportal.blogspot.com/2018/11/kotlin-dev-spring-boot-rest-api-with.html
  
