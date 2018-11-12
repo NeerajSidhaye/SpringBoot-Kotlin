@@ -1,0 +1,16 @@
+{
+   "scenarioName":"Get All Runners",
+   "steps":[
+      {
+         "name":"get_all_runners",
+         "url":"/parkrun/runners/",
+         "operation":"GET",
+         "request":{
+
+         },
+         "assertions":{
+            "status":200
+         }
+      }
+   ]
+}
