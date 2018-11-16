@@ -1,21 +1,19 @@
 {
-   "scenarioName":"Get All Runners",
-   "steps":[
-      {
-         "name":"get_all_runners",
-         "url":"/parkrun/runners/",
-         "operation":"GET",
-         "request":{
-
-         },
-         "assertions":{
-            "status":200,
-            "body":{
-              
-              "_embedded.runners[0]._links.self.href": "$NOT.NULL"
-            
+    "scenarioName": "Get All Runners",
+    "steps": [
+        {
+            "name": "get_all_runners",
+            "url": "/parkrun/runners/",
+            "operation": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 200,
+                "body": {
+                    "_embedded.runners.SIZE": "$GT.0",
+                    "_embedded.runners[0]._links.self.href": "$NOT.NULL"
+                }
             }
-         }
-      }
-   ]
+        }
+    ]
 }

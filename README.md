@@ -1,6 +1,10 @@
 # Kotlin Rest API in Spring-boot, Spring-Data, H2 In-Memory DB
-This demo project explains REST API development with Kotlin and Spring Boot.
-Integration Tests are written using [ZeroCode-BDD-TDD framework](https://github.com/authorjapps)
++ This demo project explains REST API development with Kotlin and Spring Boot.
+
++ Integration Tests are written using [ZeroCode TDD framework](https://github.com/authorjapps)
+
+**_Note:_** <br/>
+As Kotlin does the things in less code, so naturally a test framework needed to do the job in less code(almost zero code)
 
 ##### Kotlin gradle dependencies
 ```
@@ -20,6 +24,12 @@ Integration Tests are written using [ZeroCode-BDD-TDD framework](https://github.
 ![Gradle Build Kotlin](img/gradle-build-kotin.PNG)
 
 ### Step 2: Running the application
+
+Run from IDE (Right click and run as main):
+> com.xp.springboot.kotlin.SpringBootKotlinRestApiApplication
+
+-or-
+
 Open a new git bash and go to the build/libs folder. Run below command to run the application
 
 > java -jar SpringBootKotlinRestAPI-0.0.1-SNAPSHOT.jar
@@ -61,6 +71,50 @@ GET - http://localhost:8080/parkrun/runners/2
 
 DELETE - http://localhost:8080/parkrun/runners/2
 
+### A POSt call sample looks like below-
+```java
+url:http://localhost:8080/parkrun/runners
+method:POST
+
+request:
+{
+  "headers" : {
+    "Accept" : "application/hal+json;charset=UTF-8"
+  },
+  "body" : {
+    "firstName" : "Andy",
+    "lastName" : "Terris",
+    "gender" : "M",
+    "runningClub" : "Nanwitch"
+  }
+} 
+
+Response:
+{
+  "status" : 201,
+  "headers" : {
+    "Date" : [ "Fri, 16 Nov 2018 15:27:55 GMT" ],
+    "Transfer-Encoding" : [ "chunked" ],
+    "Location" : [ "http://localhost:8080/parkrun/runners/5" ],
+    "Content-Type" : [ "application/hal+json;charset=UTF-8" ]
+  },
+  "body" : {
+    "firstName" : "Andy",
+    "lastName" : "Terris",
+    "gender" : "M",
+    "runningClub" : "Nanwitch",
+    "totalRuns" : "0",
+    "_links" : {
+      "self" : {
+        "href" : "http://localhost:8080/parkrun/runners/5"
+      },
+      "parkRunner" : {
+        "href" : "http://localhost:8080/parkrun/runners/5"
+      }
+    }
+  }
+}
+```
 ### Find detailed explanation on 
-[My blog](https://extremeportal.blogspot.com/2018/11/kotlin-dev-spring-boot-rest-api-with.html) OR at
-[Dzone Article](https://dzone.com/articles/kotlin-spring-bootspring-data-h2-db-rest-api)
++ [My blog - Extreme Portal](https://extremeportal.blogspot.com/2018/11/kotlin-dev-spring-boot-rest-api-with.html) 
++ [Dzone Article - Explained in Detail](https://dzone.com/articles/kotlin-spring-bootspring-data-h2-db-rest-api)

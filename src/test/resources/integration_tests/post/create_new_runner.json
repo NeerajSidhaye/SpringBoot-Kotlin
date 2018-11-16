@@ -6,10 +6,27 @@
          "url":"/parkrun/runners",
          "operation":"POST",
          "request":{
+            "headers":{
+               "Accept" : "application/hal+json;charset=UTF-8"
+            },
             "body":"${JSON.FILE:reusable_content/request/create_runner_request.json}"
          },
          "assertions":{
-            "status":201
+            "status":201,
+            "body" : {
+               "firstName" : "Andy",
+               "lastName" : "Terris",
+               "gender" : "M",
+               "runningClub" : "Nanwitch",
+               "_links" : {
+                  "self" : {
+                     "href": "$NOT.NULL"
+                  },
+                  "parkRunner" : {
+                     "href" : "$NOT.NULL"
+                  }
+               }
+            }
          }
       }
    ]

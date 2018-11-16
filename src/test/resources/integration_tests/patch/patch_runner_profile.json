@@ -1,18 +1,36 @@
 {
-   "scenarioName":"Patch Runner profile",
-   "steps":[
-      {
-         "name":"patch_runner_profile",
-         "url":"/parkrun/runners/1",
-         "operation":"PATCH",
-         "request":{
-            "body": {
-				"totalRuns": "888"            
+    "scenarioName": "Patch Runner profile",
+    "steps": [
+        {
+            "name": "patch_runner_profile",
+            "url": "/parkrun/runners/1",
+            "operation": "PATCH",
+            "request": {
+                "headers": {
+                    "Accept": "application/hal+json;charset=UTF-8"
+                },
+                "body": {
+                    "totalRuns": "888"
+                }
+            },
+            "assertions": {
+                "status": 200,
+                "body": {
+                    "firstName": "NEERAJ",
+                    "lastName": "SIDHAYE",
+                    "gender": "M",
+                    "runningClub": "RUNWAY",
+                    "totalRuns": "888",
+                    "_links": {
+                        "self": {
+                            "href": "$NOT.NULL"
+                        },
+                        "parkRunner": {
+                            "href": "$NOT.NULL"
+                        }
+                    }
+                }
             }
-         },
-         "assertions":{
-            "status":204
-         }
-      }
-   ]
+        }
+    ]
 }
