@@ -1,6 +1,7 @@
 # Kotlin Rest API in Spring-boot, Spring-Data, H2 In-Memory DB
-This demo project explains REST API development with Kotlin and Spring Boot.
-Integration Tests are written using [ZeroCode-BDD-TDD framework](https://github.com/authorjapps)
++ This demo project explains REST API development with Kotlin and Spring Boot.
+
++ Integration Tests are written using [ZeroCode-BDD-TDD framework](https://github.com/authorjapps)
 
 ##### Kotlin gradle dependencies
 ```
@@ -20,6 +21,12 @@ Integration Tests are written using [ZeroCode-BDD-TDD framework](https://github.
 ![Gradle Build Kotlin](img/gradle-build-kotin.PNG)
 
 ### Step 2: Running the application
+
+Run from IDE (Right click and run as main):
+> com.xp.springboot.kotlin.SpringBootKotlinRestApiApplication
+
+-or-
+
 Open a new git bash and go to the build/libs folder. Run below command to run the application
 
 > java -jar SpringBootKotlinRestAPI-0.0.1-SNAPSHOT.jar
@@ -62,5 +69,5 @@ GET - http://localhost:8080/parkrun/runners/2
 DELETE - http://localhost:8080/parkrun/runners/2
 
 ### Find detailed explanation on 
-[My blog](https://extremeportal.blogspot.com/2018/11/kotlin-dev-spring-boot-rest-api-with.html) OR at
-[Dzone Article](https://dzone.com/articles/kotlin-spring-bootspring-data-h2-db-rest-api)
++ [My blog - Extreme Portal](https://extremeportal.blogspot.com/2018/11/kotlin-dev-spring-boot-rest-api-with.html) 
++ [Dzone Article - Exaplined in Detail](https://dzone.com/articles/kotlin-spring-bootspring-data-h2-db-rest-api)
