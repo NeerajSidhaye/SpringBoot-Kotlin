@@ -1,4 +1,4 @@
-# Kotin Rest API in Spring-boot, Spring-Data, H2 In-Memory DB
+# Kotlin Rest API in Spring-boot, Spring-Data, H2 In-Memory DB
 This demo project explains REST API development with Kotlin and Spring Boot.
 Integration Tests are written using [ZeroCode-BDD-TDD framework](https://github.com/authorjapps)
 
