@@ -117,4 +117,4 @@ Response:
 ```
 ### Find detailed explanation on 
 + [My blog - Extreme Portal](https://extremeportal.blogspot.com/2018/11/kotlin-dev-spring-boot-rest-api-with.html) 
-+ [Dzone Article - Exaplined in Detail](https://dzone.com/articles/kotlin-spring-bootspring-data-h2-db-rest-api)
++ [Dzone Article - Explained in Detail](https://dzone.com/articles/kotlin-spring-bootspring-data-h2-db-rest-api)

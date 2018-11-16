@@ -66,5 +66,12 @@ task integrationTests (type: Test) {
     include 'integrationtests/TestGetOperations.class'
     include 'integrationtests/TestPatchOperations.class'
     include 'integrationtests/TestPostOperations.class'
+	
+	 
+    testLogging {
+    
+     showStandardStreams = true
+     
+    }
 
 }
