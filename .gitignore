@@ -1,5 +1,12 @@
 /target/
-!.mvn/wrapper/maven-wrapper.jar
+.gradle
+/build/
+/bin/
+!gradle/wrapper/gradle-wrapper.jar
+settings.gradle
+gradlew
+gradle/
+gradlew.bat
 
 ### STS ###
 .apt_generated

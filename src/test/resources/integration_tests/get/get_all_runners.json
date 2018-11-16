@@ -9,7 +9,12 @@
 
          },
          "assertions":{
-            "status":200
+            "status":200,
+            "body":{
+              
+              "_embedded.runners[0]._links.self.href": "$NOT.NULL"
+            
+            }
          }
       }
    ]

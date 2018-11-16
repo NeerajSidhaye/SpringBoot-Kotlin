@@ -1,0 +1,18 @@
+{
+   "scenarioName":"Patch Runner profile",
+   "steps":[
+      {
+         "name":"patch_runner_profile",
+         "url":"/parkrun/runners/1",
+         "operation":"PATCH",
+         "request":{
+            "body": {
+				"totalRuns": "888"            
+            }
+         },
+         "assertions":{
+            "status":204
+         }
+      }
+   ]
+}

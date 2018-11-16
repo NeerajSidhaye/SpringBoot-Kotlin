@@ -5,6 +5,7 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
+
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -52,7 +53,8 @@ dependencies {
 	compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	compile("org.jetbrains.kotlin:kotlin-reflect")
 	runtime("com.h2database:h2")
-	compile("org.jsmart:zerocode-rest-bdd:1.2.11")
+	
+	testCompile("org.jsmart:zerocode-rest-bdd:1.2.11")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	 
 }
@@ -62,5 +64,7 @@ task integrationTests (type: Test) {
     delete '/target/'
     systemProperty 'zerocode.junit', 'gen-smart-charts-csv-reports'
     include 'integrationtests/TestGetOperations.class'
+    include 'integrationtests/TestPatchOperations.class'
+    include 'integrationtests/TestPostOperations.class'
 
 }

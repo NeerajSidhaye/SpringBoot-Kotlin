@@ -1,0 +1,16 @@
+{
+   "scenarioName":"Create New Runner",
+   "steps":[
+      {
+         "name":"create_new_runner",
+         "url":"/parkrun/runners",
+         "operation":"POST",
+         "request":{
+            "body":"${JSON.FILE:reusable_content/request/create_runner_request.json}"
+         },
+         "assertions":{
+            "status":201
+         }
+      }
+   ]
+}
