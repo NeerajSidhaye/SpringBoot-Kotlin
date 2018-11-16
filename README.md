@@ -3,6 +3,9 @@
 
 + Integration Tests are written using [ZeroCode TDD framework](https://github.com/authorjapps)
 
+**_Note:_** <br/>
+As Kotlin does the things in less code, so naturally a test framework needed to do the job in less code(almost zero code)
+
 ##### Kotlin gradle dependencies
 ```
 	compile('com.fasterxml.jackson.module:jackson-module-kotlin')
