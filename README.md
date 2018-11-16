@@ -1,7 +1,7 @@
 # Kotlin Rest API in Spring-boot, Spring-Data, H2 In-Memory DB
 + This demo project explains REST API development with Kotlin and Spring Boot.
 
-+ Integration Tests are written using [ZeroCode-BDD-TDD framework](https://github.com/authorjapps)
++ Integration Tests are written using [ZeroCode TDD framework](https://github.com/authorjapps)
 
 ##### Kotlin gradle dependencies
 ```
@@ -68,6 +68,50 @@ GET - http://localhost:8080/parkrun/runners/2
 
 DELETE - http://localhost:8080/parkrun/runners/2
 
+### A POSt call sample looks like below-
+```java
+url:http://localhost:8080/parkrun/runners
+method:POST
+
+request:
+{
+  "headers" : {
+    "Accept" : "application/hal+json;charset=UTF-8"
+  },
+  "body" : {
+    "firstName" : "Andy",
+    "lastName" : "Terris",
+    "gender" : "M",
+    "runningClub" : "Nanwitch"
+  }
+} 
+
+Response:
+{
+  "status" : 201,
+  "headers" : {
+    "Date" : [ "Fri, 16 Nov 2018 15:27:55 GMT" ],
+    "Transfer-Encoding" : [ "chunked" ],
+    "Location" : [ "http://localhost:8080/parkrun/runners/5" ],
+    "Content-Type" : [ "application/hal+json;charset=UTF-8" ]
+  },
+  "body" : {
+    "firstName" : "Andy",
+    "lastName" : "Terris",
+    "gender" : "M",
+    "runningClub" : "Nanwitch",
+    "totalRuns" : "0",
+    "_links" : {
+      "self" : {
+        "href" : "http://localhost:8080/parkrun/runners/5"
+      },
+      "parkRunner" : {
+        "href" : "http://localhost:8080/parkrun/runners/5"
+      }
+    }
+  }
+}
+```
 ### Find detailed explanation on 
 + [My blog - Extreme Portal](https://extremeportal.blogspot.com/2018/11/kotlin-dev-spring-boot-rest-api-with.html) 
 + [Dzone Article - Exaplined in Detail](https://dzone.com/articles/kotlin-spring-bootspring-data-h2-db-rest-api)
