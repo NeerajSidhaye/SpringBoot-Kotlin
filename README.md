@@ -25,6 +25,8 @@ As Kotlin does the things in less code, so naturally a test framework needed to 
 
 ### Step 2: Running the application
 
+![kotlin_gif3](https://user-images.githubusercontent.com/12598420/48653235-a63ed980-e9fb-11e8-91d4-afaf89077fd8.gif)
+
 Run from IDE (Right click and run as main):
 > com.xp.springboot.kotlin.SpringBootKotlinRestApiApplication
 
