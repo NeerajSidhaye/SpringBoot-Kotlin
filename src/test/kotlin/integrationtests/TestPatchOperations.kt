@@ -12,7 +12,7 @@ class TestPatchOperations {
 	
 	@Test
 	 @JsonTestCase("integration_tests/patch/patch_runner_profile.json")
-	 fun `patch runner profile`() {
+	 fun test_patch_runner() {
 		 
 	}
 }

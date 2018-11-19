@@ -1,5 +1,5 @@
 {
-    "scenarioName": "Patch Runner profile",
+    "scenarioName": "Patch Runner profile @@ManualTester",
     "steps": [
         {
             "name": "patch_runner_profile",

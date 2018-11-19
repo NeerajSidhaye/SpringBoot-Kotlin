@@ -30,3 +30,7 @@ gradlew.bat
 /dist/
 /nbdist/
 /.nb-gradle/
+
+/build
+/.gradle
+/out
