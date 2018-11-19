@@ -45,6 +45,9 @@ http://localhost:8080/parkrun/
 Running the gradle task named "integrationTests". This will run all the test cases defined under this gradle task.
 > gradle integrationTests
 
+![kotlin_testing_gif](https://user-images.githubusercontent.com/12598420/48721542-09a65280-ec1a-11e8-8afc-7cf9c8e8dbfa.gif)
+
+
 ![Gradle Test Run](img/gradle-test-run.PNG)
 
 ### Where is the Integration Test Report?
