@@ -14,8 +14,7 @@ class TestGetOperations {
 	
 	 @Test
 	 @JsonTestCase("integration_tests/get/get_all_runners.json")
-	 fun `get all runners`() {
-		 
+	 fun test_get_all_runners() {
 	 }
 	
 }

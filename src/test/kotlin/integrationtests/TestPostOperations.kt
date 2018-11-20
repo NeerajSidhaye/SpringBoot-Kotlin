@@ -12,7 +12,7 @@ class TestPostOperations {
 	
 	 @Test
 	 @JsonTestCase("integration_tests/post/create_new_runner.json")
-	 fun `post create runner`() {
+	 fun test_post_create_runner() {
 		 
 	}
 	

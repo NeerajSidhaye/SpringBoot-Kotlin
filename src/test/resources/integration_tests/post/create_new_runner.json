@@ -1,5 +1,5 @@
 {
-   "scenarioName":"Create New Runner",
+   "scenarioName":"Create New Runner @@SmartJohn",
    "steps":[
       {
          "name":"create_new_runner",
@@ -9,7 +9,12 @@
             "headers":{
                "Accept" : "application/hal+json;charset=UTF-8"
             },
-            "body":"${JSON.FILE:reusable_content/request/create_runner_request.json}"
+            "body": {
+               "firstName": "Andy",
+               "lastName": "Terris",
+               "gender": "M",
+               "runningClub": "Nanwitch"
+            }
          },
          "assertions":{
             "status":201,
