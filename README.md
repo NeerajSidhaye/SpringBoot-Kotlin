@@ -21,6 +21,10 @@ As Kotlin does the things in less code, so naturally a test framework needed to 
  
 > gradle clean build -x test
 
+or
+
+> mvn clean install -DskipTests
+
 ![Gradle Build Kotlin](img/gradle-build-kotin.PNG)
 
 ### Step 2: Running the application
@@ -32,18 +36,23 @@ Run from IDE (Right click and run as main):
 
 -or-
 
-Open a new git bash and go to the build/libs folder. Run below command to run the application
+Open a new git bash and go to the build/libs folder for gadle or /target folder for maven.
+ Run below command to run the application
 
 > java -jar SpringBootKotlinRestAPI-0.0.1-SNAPSHOT.jar
 
-Verify the application by accessting below url directly from browser
-http://localhost:8080/parkrun/
+Verify the application by accessing below url directly from browser
+http://localhost:5000/parkrun/
 
 ![Verify app running](img/app-running-verify.PNG)
 
 ### Step 3: How to Run Integration Test Cases?
 Running the gradle task named "integrationTests". This will run all the test cases defined under this gradle task.
 > gradle integrationTests
+or
+
+> mvn surefire:test
+
 
 ![kotlin_testing_gif](https://user-images.githubusercontent.com/12598420/48721542-09a65280-ec1a-11e8-8afc-7cf9c8e8dbfa.gif)
 
@@ -59,9 +68,9 @@ Integration Test report and logs are generated under folder /target/
 
 #### Explore other end points
 
-GET - http://localhost:8080/parkrun/runners
+GET - http://localhost:5000/parkrun/runners
 
-POST - http://localhost:8080/parkrun/runners
+POST - http://localhost:5000/parkrun/runners
 
 Sample request body:
 ```
@@ -72,13 +81,13 @@ Sample request body:
         "runningClub": "Swindon"
  }
 ```
-GET - http://localhost:8080/parkrun/runners/2
+GET - http://localhost:5000/parkrun/runners/2
 
-DELETE - http://localhost:8080/parkrun/runners/2
+DELETE - http://localhost:5000/parkrun/runners/2
 
 ### A POSt call sample looks like below-
 ```java
-url:http://localhost:8080/parkrun/runners
+url:http://localhost:5000/parkrun/runners
 method:POST
 
 request:

@@ -26,6 +26,7 @@ apply plugin: 'kotlin-jpa'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'com.adarshr.test-logger'
+apply plugin: 'maven'
 
 group = 'com.xp.springboot.restapi.kotlin'
 version = '0.0.1-SNAPSHOT'
@@ -79,7 +80,6 @@ task integrationTests(type: Test) {
 
 task cleanAll() {
     delete 'target/'
-    delete 'build/'
     delete 'out/'
 }
 
